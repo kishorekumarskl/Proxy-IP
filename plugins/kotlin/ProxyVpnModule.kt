@@ -30,7 +30,7 @@ class ProxyVpnModule(private val reactContext: ReactApplicationContext) :
     private val activityEventListener: ActivityEventListener =
         object : BaseActivityEventListener() {
             override fun onActivityResult(
-                activity: Activity?, requestCode: Int, resultCode: Int, data: Intent?
+                activity: Activity, requestCode: Int, resultCode: Int, data: Intent?
             ) {
                 if (requestCode != vpnPermissionRequestCode) return
                 if (resultCode == Activity.RESULT_OK) {
@@ -89,7 +89,7 @@ class ProxyVpnModule(private val reactContext: ReactApplicationContext) :
 
     @ReactMethod
     fun startVpn(profile: ReadableMap, promise: Promise) {
-        val activity = currentActivity
+        val activity = reactContext.currentActivity
         if (activity == null) {
             promise.reject("NO_ACTIVITY", "No active Android activity")
             return
