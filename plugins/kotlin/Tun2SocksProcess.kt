@@ -102,7 +102,7 @@ class Tun2SocksProcess(
                 field.setInt(fdObj, fd)
 
                 // F_SETFD with 0 = clear all fd flags (including FD_CLOEXEC = 1)
-                Os.fcntl(fdObj, OsConstants.F_SETFD, 0)
+                Os.fcntlInt(fdObj, OsConstants.F_SETFD, 0)
                 Log.d(TAG, "FD_CLOEXEC cleared on fd=$fd")
                 true
             } catch (e: Exception) {
