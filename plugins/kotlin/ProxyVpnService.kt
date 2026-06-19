@@ -410,7 +410,7 @@ class ProxyVpnService : VpnService() {
         return builder
             .setContentTitle("Private Proxy VPN")
             .setContentText(text)
-            .setSmallIcon(android.R.drawable.stat_sys_vpn_ic)
+            .setSmallIcon(R.mipmap.ic_launcher)
             .setContentIntent(launchPi)
             .setOngoing(true)
             .addAction(
