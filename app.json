@@ -7,7 +7,7 @@
     "icon": "./assets/images/icon.png",
     "scheme": "proxyc",
     "userInterfaceStyle": "dark",
-    "newArchEnabled": false,
+    "newArchEnabled": true,
     "splash": {
       "image": "./assets/images/icon.png",
       "resizeMode": "contain",
