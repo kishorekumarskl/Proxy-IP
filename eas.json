@@ -5,6 +5,7 @@
   },
   "build": {
     "development": {
+      "node": "20.16.0",
       "developmentClient": true,
       "distribution": "internal",
       "android": {
@@ -13,6 +14,7 @@
       }
     },
     "preview": {
+      "node": "20.16.0",
       "distribution": "internal",
       "android": {
         "buildType": "apk",
@@ -20,6 +22,7 @@
       }
     },
     "production": {
+      "node": "20.16.0",
       "distribution": "store",
       "android": {
         "buildType": "app-bundle",
