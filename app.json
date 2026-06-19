@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Private Proxy Client",
-    "slug": "proxy-client",
+    "slug": "proxy-ip",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
