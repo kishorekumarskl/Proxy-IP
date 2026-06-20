@@ -92,7 +92,9 @@ class ProxyVpnService : VpnService() {
                 killSwitch    = b.getBoolean("killSwitch", false)
                 autoReconnect = b.getBoolean("autoReconnect", true)
                 dnsMode       = b.getString("dnsMode", "direct") ?: "direct"
-                startProxyVpn(b)
+                val serverIpForNotif = b.getString("serverIp", "") ?: ""
+                startForeground(NOTIFICATION_ID, buildNotification("Connecting…", serverIpForNotif))
+                thread(name = "ProxyVpnStart") { startProxyVpn(b) }
             }
             ACTION_STOP -> stopProxyVpn("Disconnected by user")
         }
